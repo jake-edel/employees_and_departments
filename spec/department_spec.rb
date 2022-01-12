@@ -16,4 +16,17 @@ require './lib/employee'
     expect(@customer_service.employees).to be_instance_of Array
     expect(@customer_service.employees).to be_empty
   end
+
+  describe '#hire' do
+    before(:each) do
+      @bobbi = Employee.new({name: "Bobbi Jaeger", age: "30", salary: "100000"})
+      @aaron = Employee.new({name: "Aaron Tanaka", age: "25", salary: "90000"})
+      @customer_service.hire(@bobbi)
+      @customer_service.hire(@aaron)
+    end
+
+    it 'adds an employee to the employee array' do
+      expect(@customer_service.employees).to eq [@bobbi, @aaron]
+    end
+  end
  end
