@@ -1,7 +1,7 @@
 class Department
- 	attr_reader :i
+ 	attr_reader :name
 
- 	def initialize(i)
- 		@i = i
+ 	def initialize(name)
+ 		@name = name
  	end
- end
+end

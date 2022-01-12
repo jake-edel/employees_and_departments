@@ -1,11 +1,12 @@
 require './lib/department'
+require './lib/employee'
 
- Rspec.describe Department do
+ RSpec.describe Department do
  	before(:each) do
- 		@department = Department.new(i)
+ 		@department = Department.new('Customer Service')
  	end
 
- 	it 'is initialized with something or other' do
+ 	it 'is initialized with a name' do
  		expect(@department).to be_instance_of Department
  	end
  end
