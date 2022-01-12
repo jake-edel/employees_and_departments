@@ -5,4 +5,10 @@ class Department
     @name = name
     @employees = []
   end
+
+  def hire(employee)
+    return unless employee.instance_of? Employee
+
+    @employees << employee
+  end
 end
