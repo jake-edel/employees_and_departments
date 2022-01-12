@@ -29,4 +29,13 @@ require './lib/employee'
       expect(@customer_service.employees).to eq [@bobbi, @aaron]
     end
   end
+
+  describe '#expense and #expenses' do
+    it '#expenses keeps a tally of all expenses made' do
+      expect(@customer_service.expenses).to be 0
+      @customer_service.expense(100)
+      @customer_service.expense(25)
+      expect(@customer_service.expenses).to be 125
+    end
+  end
  end
