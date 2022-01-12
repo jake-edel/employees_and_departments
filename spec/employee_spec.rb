@@ -8,10 +8,10 @@ require './lib/employee'
  	it 'is initialized with a hash of attributes, and can return its name, age, and salary' do
  		expect(@bobbi).to be_instance_of Employee
  		expect(@bobbi.name).to be_instance_of String
- 		expect(@bobbi.name).to be eq 'Bobbi Jaeger'
+ 		expect(@bobbi.name).to eq "Bobbi Jaeger"
  		expect(@bobbi.age).to be_instance_of String
- 		expect(@bobbi.age).to be eq '30'
+ 		expect(@bobbi.age).to eq '30'
  		expect(@bobbi.salary).to be_instance_of String
- 		expect(@bobbi.salary).to be eq '100000'
+ 		expect(@bobbi.salary).to eq '100000'
  	end
 end

@@ -1,7 +1,9 @@
 class Employee
- 	attr_reader :i
+ 	attr_reader :name, :age, :salary
 
- 	def initialize(i)
- 		@i = i
+ 	def initialize(attributes)
+ 		@name = attributes[:name]
+ 		@age = attributes[:age]
+ 		@salary = attributes[:salary]
  	end
- end
+end
